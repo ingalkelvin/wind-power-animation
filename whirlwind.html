@@ -1,0 +1,60 @@
+<!-- Ingal, Kelvin M. -->
+<!doctype html>
+
+	<head>
+		<meta charset="utf-8">
+		<title> </title>
+		<link href="style.css" rel ="stylesheet" type="text/css">
+	</head>
+	<body>
+		<center> <canvas id="canvas" width="700" height="600"> </center>
+		<script src="barred.js"> </script>
+		<script src="fan.js"> </script>
+		<script>
+			window.onload = function() {
+				
+				var canvas = document.getElementById("canvas");
+				var context = canvas.getContext('2d');
+				
+				
+				var vr = 0;
+				var bar = new Bar();
+				var fan = new Fan();
+				
+				window.addEventListener('keyup',function(event) {
+					
+					switch(event.keyCode) {
+						
+						case 37:
+							vr = -0.02;
+						break;
+						case 39:
+							vr = 0.02;
+						break;
+						case 40:
+							vr = 0;
+						break;
+					}
+					
+				},false);
+
+				bar.x = canvas.width/2;
+				bar.y = canvas.height/2;
+				fan.x = canvas.width/2;
+				fan.y = canvas.height/2-50;
+				
+				bar.draw(context);	
+				fan.draw(context);
+			
+				(function drawFrame() {
+					window.requestAnimationFrame(drawFrame, canvas);
+					context.clearRect(0,0,canvas.width, canvas.height);
+					
+					fan.rotation += vr;
+					bar.draw(context);	
+					fan.draw(context);
+				}()); 
+			};
+		</script>
+	</body>
+</html>
