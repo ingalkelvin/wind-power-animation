@@ -1,7 +1,7 @@
 # wind-power-animation
 
 
-<img src="https://github.com/ingalkelvin/wind-power-animation/blob/main/wind.png">
+<img src="https://github.com/ingalkelvin/wind-power-animation/blob/main/wind%20power.png">
 
 Tictactoe-js is made of javascript
 
