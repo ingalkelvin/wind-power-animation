@@ -9,10 +9,6 @@ Tictactoe-js is made of javascript
 - Arrow Key left/right
 
 
-# paypal
+# Website
 
-paypal.me/kelvin.ynggal@gmail.com
-
-# BTC
-
-3LKLWWts1yTwPNYELkg1dokPpLkLnToDkF
+https://kelvin-ingal-dev-ed.my.site.com/
